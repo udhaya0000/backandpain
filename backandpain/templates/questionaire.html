@@ -1,0 +1,165 @@
+{% extends 'base.html' %} {% load sass_tags %}
+<!-- title block -->
+{% block title_block %} Back And Pain: Initial Assessment Pain Questionnaire {% endblock %}
+<!-- style block -->
+{% block style_block %}
+<link href="{% sass_src 'scss/questionaire.scss' %}" rel="stylesheet"> {% endblock %}
+<!-- content block -->
+{% block content_block %}
+<div class="container">
+    <h1>Medical Information</h1>
+    <form class="bap-form">
+        <div class="form-group">
+            <label class="label">When the pain first started, how did it start?</label>
+            <div class="row">
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="pain_start" value="gradually" checked> Gradually
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="pain_start" value="suddenly"> Suddenly
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="label">Has your pain changed since it began</label>
+                    <div class="row">
+                        <div class="form-check col-md-4">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="pain_change" value="no-change" checked> No Change
+                            </label>
+                        </div>
+                        <div class="form-check col-md-4">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="pain_change" value="Decreased"> Decreased
+                            </label>
+                        </div>
+                        <div class="form-check col-md-4">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="pain_change" value="increased"> Increased
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="label">Which of the following symptoms do you experience?</label>
+            <div class="row">
+                <div class="col-md-4">
+                    <select class="form-control" name="">
+                        <option value="numbness">Numbness</option>
+                        <option value="">Pins and Needles</option>
+                        <option>Shooting pain down the left arm</option>
+                        <option>Shooting pain down the right arm</option>
+                        <option>Shooting pain down the left leg</option>
+                        <option>Shooting pain down the right leg</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="label">Describe everything that aggravates your pain</label>
+            <div class="row">
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Lifting
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Bending
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Walking
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Standing
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Sitting
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Lying Flat
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Climbing Stairs
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Coughing
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Sneezing
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Looking Up
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Looking Down
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Truning the head
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Thinking
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Reading
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Stress
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Sleep
+                    </label>
+                </div>
+                <div class="form-check col-md-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Other
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="clearfix">
+                <div class="col-md-3 offset-md-9">
+                    <button class="btn btn-primary btn-block" type="button">Proceed</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

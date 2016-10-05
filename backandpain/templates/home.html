@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load sass_tags %}
+<!-- title block -->
+{% block title_block %} Back And Pain: Initial Assessment Pain Questionnaire {% endblock %}
+
+<!-- style block -->
+{% block style_block %}
+<link href="{% sass_src 'scss/home.scss' %}" rel="stylesheet">
+{% endblock %}
+
+<!-- content block -->
+{% block content_block %}
+<div class="container">
+    <h1>Patient's Information</h1>
+    <div class="row">
+        <div class="col-md-9">
+            <form class="bap-form">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="label">First Name</label>
+                            <input type="text" class="form-control" placeholder="Enter First Name">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="label">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Last Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="label">Date Of Birth</label>
+                            <input type="date" class="form-control" placeholder="DD/MM/YYYY">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="label">Sex</label>
+                            <div class="row">
+                                <div class="form-check col-md-6">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="sex[]" id="sex" value="m" checked> Male
+                                    </label>
+                                </div>
+                                <div class="form-check col-md-6">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="sex[]" id="sex" value="f"> Female
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <label class="label">Address Line 1</label>
+                            <input type="text" class="form-control" placeholder="Ex: #502, Street Address">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <label class="label">Address Line 2</label>
+                            <input type="text" class="form-control" placeholder="Ex: Locality">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="label">City</label>
+                            <input type="text" class="form-control" placeholder="Enter City Name">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="label">Pincode</label>
+                            <input type="text" class="form-control" placeholder="Enter Pincode">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="label">Mobile</label>
+                            <input type="text" class="form-control" placeholder="Enter Mobile Number">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="label">Email</label>
+                            <input type="email" class="form-control" placeholder="Enter Email">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="label">Height</label>
+                            <input type="number" class="form-control" placeholder="In Cms">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="label">Weight</label>
+                            <input type="number" class="form-control" placeholder="In Kgs">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <label class="label">Reference</label>
+                            <input type="text" class="form-control" placeholder="Enter Reference">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-3 offset-md-5">
+                            <button class="btn btn-primary btn-block" type="button">Proceed</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
