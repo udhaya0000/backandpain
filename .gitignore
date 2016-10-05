@@ -1,5 +1,6 @@
 *.py[cod]
 .DS_Store
+.vagrant
 *.sqlite3
 
 env/
